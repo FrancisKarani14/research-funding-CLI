@@ -1,6 +1,6 @@
 from sqlalchemy import Integer, Column, String, VARCHAR, Text
 from sqlalchemy.orm import relationship
-from lib.models.associations import Project_collaborations
+from lib.models.associations import Project_collaboration
 from lib.models.base import Base
 
 # cretes a base to inherit from
@@ -18,7 +18,7 @@ class Researcher(Base):
 
     projects = relationship(
         "Project",
-        secondary= Project_collaborations,
+        secondary=Project_collaboration.__table__,
         back_populates="researchers"
     )
 
@@ -32,7 +32,7 @@ class Funding_agency(Base):
     # relationships an agency funds a project
     projects = relationship(
         "Project",
-        secondary=Project_collaborations,
+        secondary=Project_collaboration.__table__,
         back_populates="funding_agencies"
     )
 
@@ -46,13 +46,13 @@ class Project(Base):
     # relationships since both agency and researcher table relly on project fpr relationship, the project will have relationship for both
     researchers = relationship(
         "Researcher",
-        secondary=Project_collaborations,
+        secondary=Project_collaboration.__table__,
         back_populates="projects"
 
     )
     funding_agencies = relationship(
         "Funding_agency",
-        secondary=Project_collaborations,
+        secondary=Project_collaboration.__table__,
         back_populates="projects"
 
     )
