@@ -13,12 +13,12 @@ class Researcher(Base):
     id = Column(Integer, primary_key= True)
     name= Column(String, nullable=False, unique= True)
     field_of_study = Column(Text, nullable= False)
-    email = Column(Text, nullable = False)
+    email = Column(Text, nullable = False, unique=True)
     # relationship and backpopulate
 
     projects = relationship(
         "Project",
-        secondary= "project_collaborations",
+        secondary= Project_collaborations,
         back_populates="researchers"
     )
 
@@ -31,9 +31,30 @@ class Funding_agency(Base):
     contact_email= Column(String, nullable=False, unique=True)
     # relationships an agency funds a project
     projects = relationship(
-        "project",
-        secondary="project_collaborations",
+        "Project",
+        secondary=Project_collaborations,
         back_populates="funding_agencies"
+    )
+
+    # creates the projects table, a project can have many sponsors and also many researchers
+class Project(Base):
+    __tablename__ = "projects"
+    id = Column(Integer, primary_key=True)
+    title = Column(String, nullable=False, unique=True)
+    description = Column(Text, nullable=False)
+    start_date = Column(String, nullable=False)
+    # relationships since both agency and researcher table relly on project fpr relationship, the project will have relationship for both
+    researchers = relationship(
+        "Researcher",
+        secondary=Project_collaborations,
+        back_populates="projects"
+
+    )
+    funding_agencies = relationship(
+        "Funding_agency",
+        secondary=Project_collaborations,
+        back_populates="projects"
+
     )
 
 
@@ -42,3 +63,6 @@ class Funding_agency(Base):
 
 
 
+
+
+  
