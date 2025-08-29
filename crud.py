@@ -1,12 +1,10 @@
 from models import Researcher, Funding_agency, Manager, Project, session
 
-
-def add_researcher(first_name, last_name):
-    """Add a new researcher"""
-    researcher = Researcher(first_name=first_name, last_name=last_name)
-    session.add(researcher)
-    session.commit()
-
+# def add_researcher(name, field_of_study, email):
+#     researcher = Researcher(name=name, field_of_study = field_of_study, email = email)
+#     session.add(researcher)
+#     session.commit()
+# # add_researcher("Morris", "se", "morris@gmail.com")
 
 def add_project(researchers_name, title, description, start_date):
     researcher = session.query(Researcher).filter(Researcher.name == researchers_name).first()
@@ -16,7 +14,11 @@ def add_project(researchers_name, title, description, start_date):
 # add_project("Morris", "AI", "how to dhfsdkn  ksdfbsdc m mksbcmsd  ksdcbic", "12-3-2025")
 
 
-
+def add_researcher(first_name, last_name):
+    """Add a new researcher"""
+    researcher = Researcher(first_name=first_name, last_name=last_name)
+    session.add(researcher)
+    session.commit()
 
 
 def add_manager(first_name, last_name):

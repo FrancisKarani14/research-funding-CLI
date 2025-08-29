@@ -18,4 +18,21 @@ while True:
         click.secho("view projects", fg='yellow')
         click.secho("Assign researchers", fg='yellow')
         click.secho("Assign funding agencies", fg='yellow')
-        click.secho("project options", fg='yellow')
+        
+        project_option = click.prompt("select option", type=int)
+
+        if project_option == 1:
+            click.secho("Adding a new project")
+            title = click.prompt("Add project title")
+            description = click.prompt("Add project description")
+            start_date = click.prompt("Add project start_date")
+            try:
+                add_project(title, description)
+                click.secho(f"{title}project has been added successfully")
+            except Exception as e:
+                click.secho(f"error adding project {e}")
+
+        if project_option ==2:
+            
+        
+          
