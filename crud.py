@@ -1,4 +1,4 @@
-from models.models import Researcher, Funding_agency, Manager, Project, session
+from models import Researcher, Funding_agency, Manager, Project, session
 
 def add_researcher(name, field_of_study, email):
     researcher = Researcher(name=name, field_of_study = field_of_study, email = email)
