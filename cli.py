@@ -73,10 +73,10 @@ while True:
         researcher_option = click.prompt("Select option", type=int)
 
         if researcher_option == 1:
-            name = click.prompt("Enter first name")
+            name = click.prompt("Enter name")
             field_of_study = click.prompt("Enter the field_of_study")
             email = click.prompt("Enter researcher's email")
-            add_researcher(first_name, field_of_study, email)
+            add_researcher(name, field_of_study, email)
             click.secho("Researcher added successfully!", fg="green")
 
         if researcher_option == 2:
