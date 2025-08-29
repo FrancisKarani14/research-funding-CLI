@@ -112,7 +112,7 @@ Welcome to Project Collaboration CLI
 **Francis Karani**
 
 * GitHub: [FrancisKarani14](https://github.com/FrancisKarani14)
-* LinkedIn: [Francis Karani](https://linkedin.com/in/francis-karani)
+* LinkedIn: [Ng'ang'a Karani](https://linkedin.com/in/ng'anga-karani)
 
 ---
 
