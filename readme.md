@@ -1,74 +1,43 @@
-**Project collaboration CLI**
+# Project Collaboration CLI
 
+## Description
+A CLI (Command-Line Interface) application where a project procurement organization can:
+- Add a project  
+- Add a funding agency  
+- Add a researcher  
+- Add a manager  
 
-**Description**
+The application also allows a user to assign researchers and funding agencies to a project.
 
-A CLI application where a project procurement organization can add a project, a funding agency, a researcher, and a manager. The application also allows a user to assign researchers and funding agencies to the project
+---
 
+## Features
+- A welcome menu with all the options, including an option to exit the application.  
+- Helpful navigation messages to guide users.  
+- Feedback messages that indicate whether operations were successful or not.  
 
-**Features**
+---
 
-> A welcome menu with all the options including an option to exit the application
+## Technologies
+- Plain Python  
+- SQLAlchemy  
+- Alembic  
+- Click  
+- Pipenv  
 
+---
 
->A message that helps users to navigate
+## Setup Instructions
 
+### Requirements
+- A laptop  
+- Stable internet connection  
+- Visual Studio Code (or any preferred IDE)  
 
->a message that reflects to show whetheroperations were successfull or not.
+### Clone the Repository
+```bash
+git clone git@github.com:FrancisKarani14/research-funding-CLI.git
 
+###Navigate into the product directory
 
-**Technlogies**
-- Plain Python
-
-- sql Alchemy
-
-- Alembic
-
-- click
-
-- Pipenv
-
-**Set up instructions**
-
-**Requirements**
-
--Make sure you have a laptop, stable internet, and Visual Studio Code.
-
-
-**Clone the repo**
-
--git clone 
-
-
--cd into the created directory
-
-
-- run pipenv install to install the virtual environment
-
-- run pipenv shell to get int the virtual environment
-
-- in the virtual environment, run python3 cli.py to get into the project menu
-
-- Use the menu's instructions to navigate through the project
-
-
-
-**Author**
-Francis Karani
-
-**Licence**
-
-MIT licence
-copyright @2025 Francis Karani,
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-
-
-
-
+cd research-funding-CLI
