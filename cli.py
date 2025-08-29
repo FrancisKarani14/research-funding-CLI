@@ -12,4 +12,10 @@ while True:
     click.secho("1project", fg="red")
 
     user_input = click.prompt("select option", type=int)
-    
+    if user_input == 1:
+        click.secho("project options", fg='yellow')
+        click.secho("Add project", fg='yellow')
+        click.secho("view projects", fg='yellow')
+        click.secho("Assign researchers", fg='yellow')
+        click.secho("Assign funding agencies", fg='yellow')
+        click.secho("project options", fg='yellow')
